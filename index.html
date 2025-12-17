@@ -122,18 +122,50 @@
     <div class="card">
       <h3>env0 + Terraform Platform</h3>
       <p>Design and operate a governed Terraform platform using env0 with policy enforcement, approvals, drift detection, and environment ownership. This reduces cloud spend while keeping Dev, Stage, and Prod consistent and auditable.</p>
+      <p><strong>Security & Compliance:</strong></p>
+      <ul>
+        <li>Policy-as-Code (OPA) guardrails to block non-compliant resources</li>
+        <li>Mandatory approvals for production and privileged changes</li>
+        <li>Drift detection to eliminate unmanaged infrastructure</li>
+        <li>Least-privilege IAM roles per environment</li>
+        <li>Full audit trail of infrastructure changes</li>
+      </ul>
     </div>
     <div class="card">
       <h3>CI/CD & GitOps</h3>
       <p>Production-grade delivery pipelines using GitHub Actions and ArgoCD. Automated testing, progressive delivery, and fast rollback with Git as the source of truth.</p>
+      <p><strong>Pipeline Security:</strong></p>
+      <ul>
+        <li>GitHub OIDC to AWS IAM (no long-lived credentials)</li>
+        <li>Branch protection, required reviews, and signed commits</li>
+        <li>Secrets managed via AWS Secrets Manager or SSM</li>
+        <li>ArgoCD RBAC with strict environment isolation</li>
+        <li>Immutable, Git-tracked deployments with instant rollback</li>
+      </ul>
     </div>
     <div class="card">
       <h3>Kubernetes & Containers</h3>
       <p>Design and operate EKS, ECS, and container platforms with a focus on reliability, security, and cost efficiency.</p>
+      <p><strong>Runtime Security:</strong></p>
+      <ul>
+        <li>IAM Roles for Service Accounts (IRSA)</li>
+        <li>Pod Security Standards (restricted) enforced</li>
+        <li>Private ECR repositories with image scanning</li>
+        <li>Network policies for zero-trust service communication</li>
+        <li>Centralized logging and alerting</li>
+      </ul>
     </div>
     <div class="card">
       <h3>AI Infrastructure & Deployment</h3>
       <p>Secure AI application platforms using AWS Bedrock, private networking, model access controls, observability, and scalable deployment patterns for Python and Java services.</p>
+      <p><strong>AI & Data Security:</strong></p>
+      <ul>
+        <li>Private VPC endpoints for Bedrock inference</li>
+        <li>Encryption in transit and at rest for prompts and outputs</li>
+        <li>Fine-grained IAM controls for model access</li>
+        <li>Full audit logging via CloudTrail</li>
+        <li>Guardrails to prevent sensitive data leakage</li>
+      </ul>
     </div>
   </div>
 </section>
